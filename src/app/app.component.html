@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <form id="busqueda" (ngSubmit)="Busqueda()" [formGroup]="busqueda">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="tControl">Token</label>
+        <input type="text" class="form-control" id="tControl" formControlName="token" name="token">
+      </div>
+      <label for="bControl">Búsqueda por Código o SKU de producto.</label>
+      <input type="text" class="form-control" id="bControl" formControlName="busqueda" name="busqueda">
+    </div>
+  </form>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-success btn-block" type="submit" form="busqueda">Buscar</button>
+  </div>
+  <div class="text-center">
+    <br>
+    <strong>Resultado de Búsqueda</strong>
+    <p>
+      <br>
+      <strong>Código:</strong> {{producto.codigo}}
+    </p>
+    <p>
+      <strong>SKU:</strong> {{producto.SKU}}
+    </p>
+    <p>
+      <strong>descripcion:</strong> {{producto.descripcion}}
+    </p>
+  </div>
+</div>
